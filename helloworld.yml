@@ -1,0 +1,7 @@
+---
+#tells ansible to execute the role on listed in the variable target
+- hosts: "{{target | default('localhost')}}"
+#become yes means to execute with elvated privileges
+  become: yes
+  roles:
+    - helloworld
